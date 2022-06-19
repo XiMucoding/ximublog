@@ -1,0 +1,32 @@
+{
+  "name": "ximublog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "core-js": "^3.6.5",
+    "element-ui": "^2.15.9",
+    "github-markdown-css": "^5.1.0",
+    "markdown-it": "^13.0.1",
+    "mavon-editor": "^2.10.4",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.14",
+    "@vue/cli-plugin-router": "~4.5.14",
+    "@vue/cli-plugin-vuex": "~4.5.14",
+    "@vue/cli-service": "~4.5.14",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
