@@ -1,0 +1,64 @@
+spring:
+  application:
+    # 应用名称
+    name: myBlog
+  # 数据库驱动：
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据源名称
+    name: defaultDataSource
+    # 数据库连接地址
+    url: jdbc:mysql://localhost:3306/vueblog?serverTimezone=UTC
+    # 数据库用户名&密码：
+    username: root
+    password: lizhikun
+  # tomcat上传文件大小设置
+  servlet:
+    multipart:
+      #单个文件最大大小
+      max-file-size: 50MB
+      #单次请求最大文件大小
+      max-request-size: 500MB
+
+  # 静态路劲
+#  resources:
+#    static-locations:
+#    classpath: /META-INF/resources/, classpath:/META-INF/resources/webjars/, classpath:/static/
+  # 邮箱设置
+  mail:
+    username: 204967882@qq.com
+    password: uihpfidksmmxbigh #授权码
+    host: smtp.qq.com  #其他的就把qq改了就行，如 smtp.163.com
+    #编码格式
+    default-encoding: utf-8
+    #开启加密验证
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+  #文件上传
+  multipart:
+    enabled: true #开启文件上传
+    max-file-size: 500MB
+    max-request-size: 500MB
+# minIO
+minio:
+  endpoint: http://120.79.198.192:9003 #Minio服务所在地址 端口号要改成api端口号
+  bucketName: school #存储桶名称
+  accessKey: admin #访问的key
+  secretKey: lizhikun #访问的秘钥
+
+# 应用服务 WEB 访问端口
+server:
+  port: 8088
+#下面这些内容是为了让MyBatis映射
+#指定Mybatis的Mapper文件
+mybatis:
+  mapper-locations: classpath:mappers/*xml
+#指定Mybatis的实体目录
+  mybatis.type-aliases-package: com.lzk.myblog.mybatis.entity
+
+
+
+
